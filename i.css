@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #87CEEB; /* Sky color */
+}
+
+.road {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #333; /* Road color */
+}
+
+.car {
+    position: absolute;
+    bottom: 20px; /* Position car above the road */
+    left: -100px; /* Start position of the car */
+    width: 100px;
+    height: 50px;
+    background: url('car.png') no-repeat center center;
+    background-size: contain;
+    animation: drive 5s linear infinite;
+}
+
+@keyframes drive {
+    0% {
+        left: -100px; /* Start position of the car */
+    }
+    100% {
+        left: 100%; /* End position of the car */
+    }
+}
